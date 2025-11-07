@@ -3,15 +3,19 @@ The goal of this project is to help bridge communication gaps for people with he
 
 ## 📚 Table of Contents
 1. [Overview](#-overview)
-2. [Dataset](#-dataset)
-3. [Model Architecture](#-model-architecture)
-4. [Installation](#-installation)
-5. [How to Run](#-how-to-run)
-6. [Results](#-results)
-7. [Key Insights](#-key-insights)
-8. [Repository Structure](#-repository-structure)
-9. [Future Improvements](#-future-improvements)
-10. [About the Author](#-about-the-author)
+2. [Thesis Reference](#-thesis-reference)
+3. [Dataset](#-dataset)
+4. [Model Architecture](#-model-architecture)
+5. [Implemented Notebooks](#-implemented-notebooks)
+6. [Model Comparison](#-model-comparison)
+7. [Results](#-results)
+8. [Installation](#-installation)
+9. [How to Run](#-how-to-run)
+10. [Key Insights](#-key-insights)
+11. [Future Improvements](#-future-improvements)
+12. [About the Author](#-about-the-author)
+13. [Repository Structure](#-repository-structure)
+
 
 ## 🧠 Overview
 This project implements a **Convolutional Neural Network (CNN)** from scratch to recognize **American Sign Language (ASL)** alphabet letters from images.  
@@ -49,7 +53,7 @@ Final structure:
 /delete
 /nothing
 
-## 🧩 Model Architecture
+## 🧩 Models Architecture
 
 **Frameworks & Libraries Used**
 - TensorFlow / Keras  
@@ -75,6 +79,83 @@ Final structure:
 Implemented using `ImageDataGenerator` to improve generalization.
 
 ---
+## 📓 Implemented Notebooks
+
+### 🧩 1. Custom CNN (from scratch)
+🔗 [View on Kaggle](https://www.kaggle.com/code/muhammadmagdysobhy/custom-cnn-using-data-augmentation)
+
+A custom-designed **Sequential CNN** built from scratch using TensorFlow/Keras.  
+Focused on lightweight design, regularization, and high accuracy through data augmentation.
+
+**Layers Overview**
+- Convolutional + ReLU
+- MaxPooling
+- Dropout + L2 Regularization
+- Batch Normalization
+- Dense Output Layer (Softmax, 29 classes)
+
+**Training Setup**
+- Optimizer: Adam  
+- Loss: Categorical Crossentropy  
+- Epochs: 30  
+- Image Size: 64×64×3  
+- Batch Size: 32  
+
+**Frameworks Used**
+TensorFlow, Keras, NumPy, Pandas, OpenCV, Matplotlib, Seaborn, scikit-learn
+
+- Built using Keras Sequential API  
+- Includes heavy use of **data augmentation**
+- Trained on resized ASL dataset  
+- Reached high accuracy and low overfitting  
+
+📊 *This notebook demonstrates understanding of CNN fundamentals and image preprocessing pipelines.*
+
+---
+
+### 🧠 2. CNN with VGG-16 (Transfer Learning)
+🔗 [View on Kaggle](https://www.kaggle.com/code/muhammadmagdysobhy/cnn-model-vgg-16-with-data-agumentation)
+
+- Uses a **pre-trained VGG-16** network on ImageNet  
+- Top layers fine-tuned for ASL classification  
+- Retains convolutional base to leverage pre-learned visual features  
+- Employs same preprocessing pipeline (augmentation, resizing, normalization)
+
+📊 *This notebook demonstrates the use of transfer learning for improved generalization and reduced training time.*
+
+---
+
+
+## ⚖️ Model Comparison
+
+| Feature | Custom CNN | VGG-16 Transfer Learning |
+| :-- | :-- | :-- |
+| **Model Type** | Sequential (built from scratch) | Pre-trained (Transfer Learning) |
+| **Parameters** | ~1.2M | ~15M |
+| **Training Time** | Faster (due to fewer layers) | Slower (heavier model) |
+| **Accuracy** | 96–98% | 97–99% |
+| **F1-Score** | ~0.95 | ~0.97 |
+| **Overfitting** | Slight (mitigated with dropout) | Minimal due to pre-trained base |
+| **Use Case** | Lightweight, deployable model | High accuracy for research & production |
+| **Complexity** | Lower | Higher (fine-tuning required) |
+
+**Visual Comparison Ideas:**
+- 📈 *Accuracy vs Epochs* (Custom CNN vs VGG-16)
+- 🧩 *Confusion Matrices* for both models  
+- ⏱️ *Training Time Comparison Chart*
+- 🔍 *Sample Predictions* (Correct & Incorrect Cases)
+
+📌 *The results showed that while both models achieved excellent accuracy, VGG-16 performed slightly better on unseen data — demonstrating the power of transfer learning.*
+
+## 📊 Results
+
+| Metric                  | Custom CNN | VGG-16 |
+| :---------------------- | :--------: | :----: |
+| **Training Accuracy**   |     98%    |   99%  |
+| **Validation Accuracy** |     96%    |   98%  |
+| **F1-Score**            |    0.95    |  0.97  |
+| **Loss (Validation)**   |    0.18    |  0.09  |
+
 
 ## ⚙️ Installation
 
@@ -91,7 +172,10 @@ pip install tensorflow keras numpy pandas opencv-python matplotlib seaborn sciki
 ...
 git clone https://github.com/your-username/asl-cnn.git
 cd asl-cnn
+jupyter notebook custom-cnn-using-data-augmentation.ipynb
+
 ...
+
 2.Open the notebook
 ...
 jupyter notebook custom-cnn-using-data-augmentation.ipynb
@@ -105,34 +189,40 @@ jupyter notebook custom-cnn-using-data-augmentation.ipynb
 •Evaluate results and visualize performance
 
 
-## 📊 Results
-| Metric                  | Score |
-| :---------------------- | :---: |
-| **Training Accuracy**   |  ~98% |
-| **Validation Accuracy** |  ~96% |
-| **F1-Score**            | 0.95+ |
-
-
-Example Visualizations:
-
-🖼️ Sample Dataset Grid – ASL Alphabet Samples (Custom Preprocessed)
-
-📈 Accuracy & Loss Curves – Training vs Validation Accuracy
-
-🔢 Confusion Matrix – ASL Classification Performance
-
-✅ Model Predictions – Predicted vs Actual Signs
-
 ## 🔬 Key Insights
 
-* Custom CNNs can reach high accuracy on domain-specific vision tasks without transfer learning
+•Transfer Learning (VGG-16) yields slightly better generalization.
 
-* Data augmentation and regularization were critical for strong generalization
+•Custom CNN provides a balance between performance and computational efficiency.
 
-* Model performance remained stable over long training sessions
+•Augmentation and normalization were key to achieving stable training.
 
-* Learned valuable insights into CNN design, model evaluation, and data preprocessing
+•Both models successfully recognize ASL gestures with near-human accuracy.
 
+## 🧭 Future Improvements
+
+•Extend to real-time ASL recognition (video streams).
+
+•Experiment with other architectures (ResNet50, EfficientNet).
+
+•Deploy via a web app or mobile app using TensorFlow Lite.
+
+•Build a multi-language sign recognition model.
+
+## 👤 About the Author
+
+****Muhammad Magdy Sobhy****
+- AI & Deep Learning Enthusiast | Computer Vision Researcher
+
+📫 Links:
+
+•[LinkedIn](https://www.linkedin.com/in/muhammad-magdy-652545238/)
+
+•[GitHub](https://github.com/MuhammadMagdyy)
+
+•[Kaggle](https://www.kaggle.com/muhammadmagdysobhy)
+
+Passionate about building AI systems that enhance accessibility and human–computer interaction.
 
 ## 📁 Repository Structure
 .
