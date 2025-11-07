@@ -240,6 +240,15 @@ Passionate about building AI systems that enhance accessibility and human–comp
 ## 📁 Repository Structure
 ├── custom-cnn-using-data-augmentation.ipynb
 ├── cnn-model-vgg-16-with-data-agumentation.ipynb
+├── thesis_bachelor_asl_recognition.pdf        # optional local copy of thesis
+├── requirements.txt
+├── assets/
+│   ├── asl_samples.png
+│   ├── accuracy_comparison.png
+│   ├── confusion_customcnn.png
+│   ├── confusion_vgg16.png
+│   ├── predicted_samples.png
+│   └── training_curves.png
 └── README.md
 
 
