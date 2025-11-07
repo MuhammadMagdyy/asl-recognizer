@@ -36,11 +36,6 @@ Both approaches and their evaluation are discussed in my bachelor thesis (link a
 🔗 Drive link (public):  
 [Thesis](https://drive.google.com/file/d/1hd7Jqv-Uwd5BXK47FnNZ4HYIxTkkrufS/view?usp=sharing)
 
-**Optional (recommended):** Add a local copy of your thesis to the repository for convenience and archival:
-- Filename suggestion: `thesis_bachelor_asl_recognition.pdf`
-- Then link it in README like:
-```markdown
-[Thesis (PDF)](thesis_bachelor_asl_recognition.pdf)
 
 ## 📦 Dataset
 
