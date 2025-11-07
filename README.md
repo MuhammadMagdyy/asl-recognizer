@@ -18,10 +18,29 @@ The goal of this project is to help bridge communication gaps for people with he
 
 
 ## 🧠 Overview
-This project implements a **Convolutional Neural Network (CNN)** from scratch to recognize **American Sign Language (ASL)** alphabet letters from images.  
-It uses **data augmentation**, **regularization**, and deep learning best practices to achieve high accuracy in classifying hand gestures.
 
-The model was developed as part of a research thesis exploring **computer vision for accessibility**, and serves as a portfolio project demonstrating practical AI development skills.
+This project implements **Convolutional Neural Networks (CNNs)** to recognize **American Sign Language (ASL)** alphabet letters from images.  
+It uses **data augmentation**, **regularization**, and **transfer learning** to build robust models capable of accurately classifying hand gestures
+
+The project was conducted as part of my **Bachelor Thesis in Artificial Intelligence**, exploring **computer vision for accessibility** — aiming to enhance communication for individuals with hearing and speech impairments.
+
+This repository contains two main approaches:
+- A **Custom CNN** built from scratch with data augmentation and regularization.
+- A **Transfer Learning** solution using **VGG-16** fine-tuning.
+
+Both approaches and their evaluation are discussed in my bachelor thesis (link and details below).
+
+## 📘 Thesis Reference
+
+**Bachelor Thesis (PDF) — Full report, methodology, and results:**  
+🔗 Drive link (public):  
+[Thesis](https://drive.google.com/file/d/1hd7Jqv-Uwd5BXK47FnNZ4HYIxTkkrufS/view?usp=sharing)
+
+**Optional (recommended):** Add a local copy of your thesis to the repository for convenience and archival:
+- Filename suggestion: `thesis_bachelor_asl_recognition.pdf`
+- Then link it in README like:
+```markdown
+[Thesis (PDF)](thesis_bachelor_asl_recognition.pdf)
 
 ## 📦 Dataset
 
@@ -225,8 +244,8 @@ jupyter notebook custom-cnn-using-data-augmentation.ipynb
 Passionate about building AI systems that enhance accessibility and human–computer interaction.
 
 ## 📁 Repository Structure
-.
 ├── custom-cnn-using-data-augmentation.ipynb
+├── cnn-model-vgg-16-with-data-agumentation.ipynb
 └── README.md
 
 
