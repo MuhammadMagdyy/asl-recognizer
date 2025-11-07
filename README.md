@@ -153,11 +153,11 @@ TensorFlow, Keras, NumPy, Pandas, OpenCV, Matplotlib, Seaborn, scikit-learn
 | **Use Case** | Lightweight, deployable model | High accuracy for research & production |
 | **Complexity** | Lower | Higher (fine-tuning required) |
 
-//**Visual Comparison Ideas:**
+<!-- **Visual Comparison Ideas:**
 //- 📈 *Accuracy vs Epochs* (Custom CNN vs VGG-16)
 //- 🧩 *Confusion Matrices* for both models  
 //- ⏱️ *Training Time Comparison Chart*
-//- 🔍 *Sample Predictions* (Correct & Incorrect Cases)
+//- 🔍 *Sample Predictions* (Correct & Incorrect Cases) -->
 
 📌 *The results showed that while both models achieved excellent accuracy, VGG-16 performed slightly better on unseen data — demonstrating the power of transfer learning.*
 
