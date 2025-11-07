@@ -183,17 +183,16 @@ pip install tensorflow keras numpy pandas opencv-python matplotlib seaborn sciki
 ## 🚀 How to Run
 
 1.Clone this repository:
-...
+```
 git clone https://github.com/your-username/asl-cnn.git
 cd asl-cnn
 jupyter notebook custom-cnn-using-data-augmentation.ipynb
-
-...
+```
 
 2.Open the notebook
-...
+```
 jupyter notebook custom-cnn-using-data-augmentation.ipynb
-...
+```
 3.Run all cells to:
 
 •Load and preprocess dataset
